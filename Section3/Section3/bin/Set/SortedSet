@@ -1,0 +1,23 @@
+SortedSet interface in Java extends the Set interface and introduces methods specifically
+related to the sorted nature of the set. Here are some of the methods that are part of the
+SortedSet interface and not present in the more general Set interface:
+
+1. Comparator<? super E> comparator():
+Returns the comparator used to order the elements in this sorted set, 
+or null if this set uses the natural ordering of its elements.
+
+2. E first():
+Returns the first (lowest) element in this sorted set.
+
+3. E last():
+Returns the last (highest) element in this sorted set.
+
+4. SortedSet<E> headSet(E toElement):
+Returns a view of the portion of this sorted set whose elements are strictly less than toElement.
+
+5. SortedSet<E> tailSet(E fromElement):
+Returns a view of the portion of this sorted set whose elements are greater than or equal to fromElement.
+
+6. SortedSet<E> subSet(E fromElement, E toElement):
+Returns a view of the portion of this sorted set whose elements range from fromElement (inclusive) to toElement (exclusive).
+

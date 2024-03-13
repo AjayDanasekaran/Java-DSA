@@ -1,0 +1,20 @@
+The PriorityQueue class in Java implements the Queue interface and adds some additional methods
+specific to its priority queue behavior. Here are some methods that are specific to PriorityQueue
+and not present in the general Queue interface:
+
+1. Comparator<? super E> comparator():
+	This method returns the comparator used to order the elements in this priority queue,
+	or null if the natural ordering is used.
+	PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+	Comparator<? super Integer> comparator = priorityQueue.comparator();
+
+2. Iterator<E> iterator():
+	Returns an iterator over the elements in this priority queue. 
+	The iterator does not guarantee any specific order of elements.
+	PriorityQueue<String> priorityQueue = new PriorityQueue<>();
+	Iterator<String> iterator = priorityQueue.iterator();
+
+3. Spliterator<E> spliterator():
+	Returns a Spliterator over the elements in this priority queue.
+	PriorityQueue<Double> priorityQueue = new PriorityQueue<>();
+	Spliterator<Double> spliterator = priorityQueue.spliterator();

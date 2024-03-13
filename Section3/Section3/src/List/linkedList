@@ -1,0 +1,22 @@
+Linked lists in Java have some methods that are specific to them and are not available in other classes. 
+Here are a few of them:
+
+2. addFirst() and addLast(): 
+	Linked lists in Java (e.g., LinkedList class) have methods to add elements at the beginning (addFirst())
+	or end (addLast()) of the list. These operations are not available in some other standard collection classes.
+
+4. getFirst() and getLast():
+	Linked lists provide methods to retrieve the first (getFirst()) and last (getLast()) elements of the list.
+	This is specific to linked lists and not available in other standard collections like arrays or sets.
+
+6. removeFirst() and removeLast():
+	Similarly, linked lists offer methods to remove the first (removeFirst()) and last (removeLast()) elements from the list.
+	These operations are not available in arrays or other collection classes.
+
+8. offer(), offerFirst(), and offerLast(): 
+	These methods are specific to linked lists and are used for adding elements with different behaviors, 
+	like adding at the end (offerLast()) or at the beginning (offerFirst()).
+
+10. poll(), pollFirst(), and pollLast(): 
+	Linked lists provide methods to remove and return elements from different positions, 
+	such as the head (poll()), first (pollFirst()), or last (pollLast()). These methods are not available in other collection classes.

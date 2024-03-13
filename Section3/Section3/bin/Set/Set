@@ -1,0 +1,118 @@
+The Set interface is a part of the Java Collections Framework and is declared as follows:
+public interface Set<E> extends Collection<E>
+
+All Superinterfaces:
+Collection<E>, Iterable<E>
+All Known Subinterfaces:
+NavigableSet<E>, SortedSet<E>
+All Known Implementing Classes:
+AbstractSet, ConcurrentHashMap.KeySetView, ConcurrentSkipListSet,
+CopyOnWriteArraySet, EnumSet, HashSet, JobStateReasons, LinkedHashSet, TreeSet
+
+Implementing Classes:
+1. HashSet:
+Set<String> hashSet = new HashSet<>();
+
+2. LinkedHashSet:
+Set<String> linkedHashSet = new LinkedHashSet<>();
+
+3. TreeSet:
+Set<String> treeSet = new TreeSet<>();
+
+4. EnumSet:
+Set<YourEnumType> enumSet = EnumSet.noneOf(YourEnumType.class);
+
+5: AbstractSet:
+Set<String> abstractSet = new HashSet<>();
+
+6: ConcurrentHashMap.KeySetView:
+Set<String> keySetView = ConcurrentHashMap.newKeySet();
+
+7. ConcurrentSkipListSet:
+Set<String> concurrentSkipListSet = new ConcurrentSkipListSet<>();
+
+8. CopyOnWriteArraySet:
+Set<String> copyOnWriteArraySet = new CopyOnWriteArraySet<>();
+
+9. JobStateReasons:
+Set<String> jobStateReasons = new JobStateReasons();
+
+Methods Inherited from Collection:
+1. boolean add(E element)
+2. boolean addAll(Collection<? extends E> c)
+3. void clear()
+4. boolean contains(Object o)
+5. boolean containsAll(Collection<?> c)
+6. boolean equals(Object o)
+7. int hashCode()
+8. boolean isEmpty()
+9. Iterator<E> iterator()
+10. boolean remove(Object o)
+11. boolean removeAll(Collection<?> c)
+12. boolean removeIf(Predicate<? super E> filter)
+13. boolean retainAll(Collection<?> c)
+14. int size()
+15. Object[] toArray()
+16. <T> T[] toArray(T[] a)
+
+Set-Specific Methods:
+No Duplicates:
+Sets do not allow duplicate elements. Adding an element that is already present will have no effect.
+
+No Indexing:
+Unlike lists, sets do not provide index-based access to elements, as they are not ordered.
+
+No Get Method:
+Sets don't have a get method to retrieve an element at a specific index.
+
+No Sublist:
+Sets do not support sublists, as they are not ordered.
+
+Set Operations:
+Union, intersection, and difference operations can be performed using addAll,
+retainAll, and removeAll methods, respectively.
+Set<String> set1 = new HashSet<>(Arrays.asList("A", "B", "C"));
+Set<String> set2 = new HashSet<>(Arrays.asList("B", "C", "D"));
+
+// Union
+set1.addAll(set2);
+
+// Intersection
+set1.retainAll(set2);
+
+// Difference
+set1.removeAll(set2);
+
+Characteristics of Set:
+1. No Duplicates:
+A Set does not allow duplicate elements. If you attempt to add an element that is already present,
+the add method will return false, and the set will remain unchanged.
+
+2. Unordered:
+The elements in a Set do not have a specific order.
+The order of elements is not guaranteed to be the same as the order in which they were added.
+
+3.Implements Collection Interface:
+The Set interface extends the Collection interface, which means it inherits methods like add,
+remove, contains, and others from the Collection interface.
+ 
+4. Common Implementations:
+Three primary implementations of the Set interface are HashSet, LinkedHashSet, and TreeSet.
+Each has its own characteristics:
+HashSet: Uses a hash table for storage, providing constant-time average complexity for basic operations
+like add, remove, and contains.
+LinkedHashSet: Maintains the order of insertion, using a linked list in addition to a hash table.
+TreeSet: Maintains elements in a sorted order (according to their natural order or a specified comparator).
+
+5. No Indexing:
+Unlike List, elements in a Set cannot be accessed by an index. There is no get method,
+as the order of elements is not guaranteed.
+
+6. Null Elements:
+Most Set implementations do not allow null elements. 
+However, some implementations like HashSet do permit a single null element.
+
+7. Fail-Fast Iteration:
+Iterators of Set implementations are generally fail-fast, 
+meaning they will throw a ConcurrentModificationException if the set is modified
+while an iteration is in progress.

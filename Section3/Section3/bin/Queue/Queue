@@ -1,0 +1,80 @@
+Queue Interface in Java Collections Framework:
+	The Queue interface is part of the Java Collections Framework and extends the Collection interface.
+	It represents a collection designed for holding elements prior to processing.
+	Queues follow the First-In-First-Out (FIFO) order.
+	
+All Superinterfaces:
+Collection<E>, Iterable<E>
+All Known Subinterfaces:
+BlockingDeque<E>, BlockingQueue<E>, Deque<E>, TransferQueue<E>
+All Known Implementing Classes:
+AbstractQueue, ArrayBlockingQueue, ArrayDeque, ConcurrentLinkedDeque, ConcurrentLinkedQueue, DelayQueue,
+LinkedBlockingDeque, LinkedBlockingQueue, LinkedList, LinkedTransferQueue, PriorityBlockingQueue, 
+PriorityQueue, SynchronousQueue
+
+Implementing Classes:
+1. LinkedList:
+Queue<String> linkedListQueue = new LinkedList<>();
+
+2. PriorityQueue:
+Queue<String> priorityQueue = new PriorityQueue<>();
+
+3. ArrayDeque:
+Queue<String> arrayDequeQueue = new ArrayDeque<>();
+
+4. ArrayBlockingQueue:
+Queue<String> arrayBlockingQueue = new ArrayBlockingQueue<>(10);
+
+5. LinkedBlockingQueue:
+Queue<String> linkedBlockingQueue = new LinkedBlockingQueue<>();
+
+6. PriorityBlockingQueue
+Queue<Integer> priorityBlockingQueue = new PriorityBlockingQueue<>();
+
+7. ConcurrentLinkedQueue:
+Queue<String> concurrentLinkedQueue = new ConcurrentLinkedQueue<>();
+
+8. DelayQueue: 
+Queue<DelayedElement> delayQueue = new DelayQueue<>();
+
+9. LinkedTransferQueue: 
+Queue<String> linkedTransferQueue = new LinkedTransferQueue<>();
+
+10. SynchronousQueue: 
+Queue<String> synchronousQueue = new SynchronousQueue<>();
+
+Methods Inherited from Collection:
+1. boolean add(E element)
+2. boolean addAll(Collection<? extends E> c)
+3. void clear()
+4. boolean contains(Object o)
+5. boolean containsAll(Collection<?> c)
+6. boolean equals(Object o)
+7. int hashCode()
+8. boolean isEmpty()
+9. Iterator<E> iterator()
+10. boolean remove(Object o)
+11. boolean removeAll(Collection<?> c)
+12. boolean removeIf(Predicate<? super E> filter)
+13. boolean retainAll(Collection<?> c)
+14. int size()
+15. Object[] toArray()
+16. <T> T[] toArray(T[] a)
+
+Queue-specific methods:
+Insertion:
+	boolean offer(E e): Inserts the specified element into this queue.
+	boolean add(E e): Inserts the specified element into this queue (equivalent to offer, 
+	but may throw an exception if the element cannot be inserted).
+	
+Extraction:
+	E poll(): Retrieves and removes the head of this queue, or returns null if this queue is empty.
+	E remove(): Retrieves and removes the head of this queue.
+	E peek(): Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+	E element(): Retrieves, but does not remove, the head of this queue.
+	
+Bulk Operations:
+	int drainTo(Collection<? super E> c): Removes all available elements from this queue and adds them to 
+	the given collection.
+	int drainTo(Collection<? super E> c, int maxElements): Removes at most the given number of available 
+	elements from this queue and adds them to the given collection.

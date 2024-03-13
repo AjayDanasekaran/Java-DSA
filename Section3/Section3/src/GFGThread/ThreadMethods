@@ -1,0 +1,52 @@
+Thread Notes:
+-----------------------------------------------------Start vs Run------------------------------------------------------------------------------
+1. start()										 |run()
+2. Creates a new thread and the run() method is  |No new thread is created and the run() method is executed on the calling thread itself.
+   executed on the newly created thread.		 |
+3. Can’t be invoked more than one time otherwise |Multiple invocation is possible
+   throws java.lang.IllegalStateException        |
+4. Defined in java.lang.Thread class.            |Defined in java.lang.Runnable interface and must be overridden in the implementing class.
+
+-----------------------------------------------------Yield vs Sleep----------------------------------------------------------------------------
+Property       |Yield Method 										  |Sleep Method
+1.Purpose      |If a thread wants to pause its execution to give      |If a thread doesn’t want to perform any operation for a particular
+		       |chance for the remaining thread of the same priority  |amount of time then we should go for the sleep method.
+		       |then we should go for the yield method.               |
+2.Over-loading |This method is not overloaded 						  |The sleep method is overloaded.
+3.Exception    |This method doesn’t throw an exception 				  |This method throws  Interrupted Exception,IllegalArgument Exception
+
+Sleep(): This Method is used to pause the execution of current thread for a specified time in Milliseconds. 
+		 Here, Thread does not lose its ownership of the monitor and resume’s it’s execution
+
+Wait(): This method is defined in object class. 
+        It tells the calling thread (a.k.a Current Thread) to wait until another thread invoke’s the notify() or notifyAll()
+        method for this object, The thread waits until it reobtains the ownership of the monitor and Resume’s Execution.
+        
+-----------------------------------------------------Wait vs Sleep-----------------------------------------------------------------------------
+1. Wait()													|Sleep()
+2. Wait() method belongs to Object class.					|Sleep() method belongs to Thread class.
+3. Wait() should be called only from Synchronized context.  |There is no need to call sleep() from Synchronized context.
+4. Wait() is not a static method. 							|Sleep() is a static method. 
+5. Wait() Has Three Overloaded Methods:						|Sleep() Has Two Overloaded Methods:
+wait()														|sleep(long millis)millis: milliseconds
+wait(long timeout)											|sleep(long millis,int nanos) nanos: Nanoseconds
+wait(long timeout, int nanos)								|
+
+yield():
+If a thread wants to pass its execution to give chance to remaining threads of the same priority then we should go for yield()
+
+join():
+If a thread wants to wait until completing of some other thread then we should go for join()
+
+sleep():
+If a thread does not want to perform any operation for a particular amount of time, then it goes for sleep()
+
+-----------------------------------------------------Wait vs Join------------------------------------------------------------------------------
+1)wait()                                                   |join()
+2)It is a method of java.lang.Object class.				   |It is a method of java.lang.
+3)wait() method can be called by a synchronized block      |It is used to stop the current thread.
+  or method.											   |
+4)wait() method is implemented for performing 	           |It can be called either with synchronized and without synchronized context.
+   multi-thread-synchronization.						   |
+5)wait() method causes the thread to sleep until 		   |It can be used to add sequence among more than one thread
+  notify() and notifyAll() are called

@@ -1,0 +1,86 @@
+List interface is a part of the Java Collections Framework.
+
+The List interface is declared as follows:
+public interface List<E> extends Collection<E>
+
+All Superinterfaces:
+Collection<E>, Iterable<E>
+All Known Implementing Classes:
+AbstractList, AbstractSequentialList, ArrayList, AttributeList, CopyOnWriteArrayList,
+LinkedList, RoleList, RoleUnresolvedList, Stack, Vector
+
+Several classes implement the List interface. Some of the common implementing classes include:
+1. ArrayList
+List<String> arrayList = new ArrayList<>();
+
+2. LinkedList
+List<String> linkedList = new LinkedList<>();
+
+3. Vector
+List<String> vector = new Vector<>();
+
+4. Stack
+Stack<String> stack = new Stack<>();
+
+5. CopyOnWriteArrayList
+List<String> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
+
+6. ImmutableList (from Guava)
+List<String> immutableList = ImmutableList.of("A", "B", "C");
+
+-----------------------------------------------------List Interface Implemented Methods-----------------------------------------------------------
+
+Methods Inherited from Collection:
+1. boolean add(E element)
+2. boolean addAll(Collection<? extends E> c)
+3. void clear()
+4. boolean contains(Object o)
+5. boolean containsAll(Collection<?> c)
+6. boolean equals(Object o)
+7. int hashCode()
+8. boolean isEmpty()
+9. Iterator<E> iterator()
+10. boolean remove(Object o)
+11. boolean removeAll(Collection<?> c)
+12. boolean removeIf(Predicate<? super E> filter)
+13. boolean retainAll(Collection<?> c)
+14. int size()
+15. Object[] toArray()
+16. <T> T[] toArray(T[] a)
+
+List-Specific Methods:
+1. void add(int index, E element)
+2. boolean addAll(int index, Collection<? extends E> c)
+3. E get(int index)
+4. int indexOf(Object o)
+5. int lastIndexOf(Object o)
+6. ListIterator<E> listIterator()
+7. ListIterator<E> listIterator(int index)
+8. E remove(int index)
+9. E set(int index, E element)
+10. List<E> subList(int fromIndex, int toIndex)
+
+Characteristics of Lists:
+1. Ordered Collection:
+A List maintains the order in which elements are inserted. 
+This means that when you iterate through the elements of a List, 
+they will be returned in the order in which they were added.
+
+2. Allows Duplicate Elements:
+Unlike a Set, a List allows duplicate elements. 
+You can have multiple elements with the same value in a List.
+
+3. Indexed Access:
+Elements in a List can be accessed using their index.
+The index starts from 0 for the first element and goes up to (size - 1) for the last element.
+
+4. Dynamic Size:
+Unlike arrays, which have a fixed size, 
+List implementations in Java (such as ArrayList and LinkedList) can dynamically grow
+or shrink in size as elements are added or removed.
+
+5. Iterating Through Elements:
+You can iterate through the elements of a List using iterators or enhanced for loops.
+
+6. Null Elements:
+List implementations typically allow null elements.

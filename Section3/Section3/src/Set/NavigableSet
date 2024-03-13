@@ -1,0 +1,39 @@
+The NavigableSet interface in Java extends the SortedSet interface and introduces additional methods
+specifically designed for navigation and retrieval operations based on the order of elements. 
+Here are some of the methods in the NavigableSet interface:
+
+1. E ceiling(E e):
+Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
+
+2. E floor(E e):
+Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
+
+3. E higher(E e):
+Returns the least element in this set strictly greater than the given element, or null if there is no such element.
+
+4. E lower(E e):
+Returns the greatest element in this set strictly less than the given element, or null if there is no such element.
+
+5. E pollFirst():
+Retrieves and removes the first (lowest) element, or returns null if this set is empty.
+
+6. E pollLast():
+Retrieves and removes the last (highest) element, or returns null if this set is empty.
+
+7. NavigableSet<E> descendingSet():
+Returns a reverse order view of this set.
+
+8. Iterator<E> descendingIterator():
+Returns an iterator over the elements in this set, in descending order.
+
+9. NavigableSet<E> subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive):
+Returns a view of the portion of this set whose elements range from fromElement to toElement.
+
+10. NavigableSet<E> headSet(E toElement, boolean inclusive):
+Returns a view of the portion of this set whose elements are strictly less than toElement.
+
+11. NavigableSet<E> tailSet(E fromElement, boolean inclusive):
+Returns a view of the portion of this set whose elements are greater than or equal to fromElement.
+
+12. Iterator<E> iterator():
+Returns an iterator over the elements in this set, in ascending order.

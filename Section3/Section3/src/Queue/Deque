@@ -1,0 +1,75 @@
+Certainly! The Deque interface in Java stands for "double-ended queue." 
+It extends the Queue interface and provides a more complete and flexible set of methods for working
+with double-ended queues, where elements can be inserted and removed from both ends.
+
+implementing classes of the Deque interface:
+1. ArrayDeque:
+Deque<String> arrayDeque = new ArrayDeque<>();
+
+2. LinkedList:
+Deque<String> linkedListDeque = new LinkedList<>();
+
+3. LinkedBlockingDeque:
+Deque<String> linkedBlockingDeque = new LinkedBlockingDeque<>();
+
+3. ArrayBlockingDeque:
+Deque<String> arrayBlockingDeque = new ArrayBlockingDeque<>();
+
+Methods for Adding Elements:
+2. addFirst(E e) and addLast(E e):
+	Adds the specified element to the front or end of the deque.
+	Throws an exception if the operation fails.
+
+4. offerFirst(E e) and offerLast(E e):
+	Inserts the specified element at the front or end of the deque.
+	Returns true if successful, false if not.
+
+Methods for Removing Elements:
+6.	removeFirst() and removeLast():
+	Retrieves and removes the first or last element of the deque.
+	Throws an exception if the deque is empty.
+	
+8. pollFirst() and pollLast():
+	Retrieves and removes the first or last element of the deque, or returns null if empty.
+	
+Methods for Examining Elements:
+10. getFirst() and getLast():
+	Retrieves, but does not remove, the first or last element of the deque.
+	Throws an exception if the deque is empty.
+	
+12. peekFirst() and peekLast():
+	Retrieves, but does not remove, the first or last element of the deque, or returns null if empty.
+	
+Methods for Iterating Over Elements:
+14. iterator() and descendingIterator():
+	Returns an iterator over the elements in normal or reverse order, respectively.
+
+Methods for Stack Operations:
+15. push(E e):
+	Inserts the specified element at the front of the deque.
+	Equivalent to addFirst(E e).
+	
+16. pop():
+	Retrieves and removes the first element of the deque.
+	Equivalent to removeFirst().
+	
+Other Methods:
+18. removeFirstOccurrence(Object o) and removeLastOccurrence(Object o):
+	Removes the first or last occurrence of the specified element from the deque, if present.
+	Returns true if an element was removed.
+	
+19. offer(E e):
+	Adds the specified element to the end of the deque.
+	Equivalent to offerLast(E e).
+	
+19. poll():
+	Retrieves and removes the first element of the deque, or returns null if empty.
+	Equivalent to pollFirst().
+	
+20. element():
+	Retrieves, but does not remove, the first element of the deque.
+	Equivalent to getFirst().
+	
+21. peek():
+	Retrieves, but does not remove, the first element of the deque, or returns null if empty.
+	Equivalent to peekFirst().

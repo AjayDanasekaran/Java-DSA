@@ -1,0 +1,18 @@
+In Java, the Stack class is a part of the java.util package and provides a specific set of methods that are not available
+in other general-purpose collection classes. Here are some of the methods specific to the Stack class:
+
+1. push(E item):
+	Adds an item to the top of the stack.
+
+2. pop():
+	Removes and returns the item from the top of the stack.
+
+3. peek():
+	Returns the item on the top of the stack without removing it.
+
+4. empty():
+	Returns true if the stack is empty, false otherwise.
+
+5. search(Object o):
+	Searches for the specified object in the stack and returns its position relative to the top of the stack.
+	Returns -1 if the object is not found.

@@ -1,0 +1,47 @@
+BlockingQueue is an interface in   that extends the Queue interface and
+adds support for operations that wait for the queue to become non-empty when
+retrieving an element and wait for space to become available in the queue when adding an element.
+
+Implementing classes of the BlockingDeque:
+1. LinkedBlockingDeque:
+	Description: Implements a linked (unbounded) blocking deque.
+	BlockingDeque<String> deque = new LinkedBlockingDeque<>();
+	
+2. LinkedBlockingDeque with Capacity:
+	Description: Similar to LinkedBlockingDeque but with a specified capacity.
+	BlockingDeque<String> dequeWithCapacity = new LinkedBlockingDeque<>(10);
+	
+3. ArrayBlockingDeque:
+	Description: Implements an array-backed blocking deque with a fixed capacity.
+	BlockingDeque<String> arrayDeque = new ArrayBlockingDeque<>(10);
+
+4. PriorityBlockingDeque:
+	Description: Implements a blocking priority deque. 
+	The elements are ordered according to their natural ordering or by a specified comparator.
+	BlockingDeque<String> priorityDeque = new PriorityBlockingDeque<>()
+
+Methods in BlockingQueue:
+1. put(E e):
+	Adds the specified element to the queue, waiting if necessary for space to become available.
+	
+2. take():
+	Retrieves and removes an element from the front of the queue,
+	waiting if necessary until an element becomes available.
+
+3. offer(E e, long timeout, TimeUnit unit):
+	Inserts the specified element into this queue, 
+	waiting up to the specified timeout if necessary for space to become available.
+
+4. poll(long timeout, TimeUnit unit):
+	Retrieves and removes the head of this queue,
+	waiting up to the specified timeout if necessary for an element to become available.
+
+5. remainingCapacity():
+	Returns the number of additional elements that this queue can ideally
+	(in the absence of memory or resource constraints) accept without blocking.
+
+6. drainTo(Collection<? super E> c):
+	Removes all available elements from this queue and adds them to the given collection.
+	
+7.drainTo(Collection<? super E> c, int maxElements):
+	Removes at most the given number of available elements from this queue and adds them to the given collection.

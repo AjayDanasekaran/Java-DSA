@@ -1,0 +1,26 @@
+ArrayList is a class in Java that belongs to the java.util package and provides dynamic array-like functionality.
+While many of its methods are common with other collection classes,
+there are some methods specific to ArrayList that are not available in other classes without code.
+Here are a few of them:
+
+1. trimToSize():
+	This method trims the capacity of an ArrayList instance to be the list's current size.
+	It reduces the internal array size to the size of the elements currently in the list.
+
+2. ensureCapacity(int minCapacity):
+	This method increases the capacity of an ArrayList instance,
+	if necessary, to ensure that it can hold at least the specified number of elements.
+	It is useful when you know in advance that you will be adding a large number of elements.
+
+3. clone():
+	The clone() method in ArrayList creates a shallow copy of the ArrayList.
+	While the clone() method is available for other classes, the behavior of cloning may vary depending on the class,
+	and it's not guaranteed to be a shallow copy.
+	
+4. indexOf(Object o) and lastIndexOf(Object o):
+	These methods return the index of the first/last occurrence of the specified element in the list.
+	While similar methods exist in other List implementations, the specific behavior might differ.
+	
+5. removeRange(int fromIndex, int toIndex):
+	This method removes all elements from the ArrayList that fall within the specified range. 
+	It's a more specific operation compared to subList() in other List implementations.

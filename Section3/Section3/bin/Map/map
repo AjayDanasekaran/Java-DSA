@@ -1,0 +1,87 @@
+Map Interface in Java
+The Map interface is another key component of the Java Collections Framework. It represents a collection of key-value
+pairs where each key is associated with exactly one value.
+
+Declaration:
+public interface Map<K, V>
+
+All Known Subinterfaces:
+Bindings, ConcurrentMap<K,V>, ConcurrentNavigableMap<K,V>, LogicalMessageContext, MessageContext,
+NavigableMap<K,V>, SOAPMessageContext, SortedMap<K,V>
+All Known Implementing Classes:
+AbstractMap, Attributes, AuthProvider, ConcurrentHashMap, ConcurrentSkipListMap, EnumMap, HashMap,
+Hashtable, IdentityHashMap, LinkedHashMap, PrinterStateReasons, Properties, Provider, RenderingHints,
+SimpleBindings, TabularDataSupport, TreeMap, UIDefaults, WeakHashMap
+
+Implementing Classes:
+1. HashMap:
+Map<K, V> hashMap = new HashMap<>();
+
+2. TreeMap:
+Map<K, V> treeMap = new TreeMap<>();
+
+3. LinkedHashMap:
+Map<K, V> linkedHashMap = new LinkedHashMap<>();
+
+Map Interface Methods:
+
+Basic Operations:
+1. void clear()
+2. boolean containsKey(Object key)
+3. boolean containsValue(Object value)
+4. Set<Map.Entry<K,V>> entrySet()
+5. boolean equals(Object o)
+6. V get(Object key)
+7. V getOrDefault(Object key, V defaultValue)
+8. int hashCode()
+9. boolean isEmpty()
+10. Set<K> keySet()
+11. V put(K key, V value)
+12. void putAll(Map<? extends K,? extends V> m)
+13. V putIfAbsent(K key, V value)
+14. V remove(Object key)
+15. boolean remove(Object key, Object value)
+16. V replace(K key, V value)
+17. boolean replace(K key, V oldValue, V newValue)
+18. void replaceAll(BiFunction<? super K,? super V,? extends V> function)
+19. int size()
+20. Collection<V> values()
+
+Bulk Operations:
+1. void putAll(Map<? extends K,? extends V> m)
+2. void forEach(BiConsumer<? super K,? super V> action)
+
+Specialized Operations:
+1. V compute(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)
+2. V computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)
+3. V computeIfPresent(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)
+4. V merge(K key, V value, BiFunction<? super V,? super V,? extends V> remappingFunction)
+5. default V putIfAbsent(K key, V value)
+6. default boolean remove(Object key, Object value)
+7. default V replace(K key, V value)
+8. default boolean replace(K key, V oldValue, V newValue)
+9. default void replaceAll(BiFunction<? super K,? super V,? extends V> function)
+
+Characteristics of Maps:
+1. Key-Value Pairs:
+Maps store data as key-value pairs, where each key is associated with a specific value.
+
+2. No Duplicate Keys:
+Keys in a Map must be unique. Adding a duplicate key will overwrite the existing key-value pair.
+
+3. Null Keys and Values:
+Depending on the implementation, maps may or may not allow null keys and values.
+
+4. Iteration:
+Iterating through a Map can be done using keySet, values, or entrySet, 
+offering flexibility in accessing keys, values, or both.
+
+5. Ordering:
+The ordering of key-value pairs may vary among different map implementations. 
+LinkedHashMap maintains the order of insertion, while HashMap does not guarantee any specific order.
+
+6. Thread Safety:
+Some implementations, like ConcurrentHashMap, provide thread-safe operations.
+
+7. Dynamic Size:
+Similar to lists, map implementations can dynamically adjust in size based on the addition or removal of key-value pairs.
